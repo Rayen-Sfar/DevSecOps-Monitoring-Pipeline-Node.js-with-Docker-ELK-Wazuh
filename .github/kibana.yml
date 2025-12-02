@@ -1,0 +1,8 @@
+server.name: kibana
+server.host: "0.0.0.0"
+
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+
+xpack.encryptedSavedObjects.encryptionKey: "a9f6bcd2e5f44c8ea9f1e9d3a4c6b7d9"
+xpack.security.enabled: false
+xpack.reporting.enabled: false

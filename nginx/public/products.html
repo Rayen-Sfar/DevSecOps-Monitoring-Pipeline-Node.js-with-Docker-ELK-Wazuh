@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .product h2 {
+      margin-bottom: 10px;
+    }
+    .product p {
+      margin-bottom: 15px;
+    }
+    .product button {
+      padding: 10px 20px;
+      background: #f5576c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .product button:hover {
+      background: #e04560;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Products for Sale</h1>
+    <div class="products">
+      <div class="product">
+        <h2>Product 1</h2>
+        <p>Description of Product 1. This is a great item to buy.</p>
+        <p>Price: $10.00</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="product">
+        <h2>Product 2</h2>
+        <p>Description of Product 2. Another excellent choice.</p>
+        <p>Price: $15.00</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="product">
+        <h2>Product 3</h2>
+        <p>Description of Product 3. Don't miss out on this deal.</p>
+        <p>Price: $20.00</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="product">
+        <h2>Product 4</h2>
+        <p>Description of Product 4. High quality and affordable.</p>
+        <p>Price: $25.00</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const buyButtons = document.querySelectorAll('.product button');
+    buyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        window.location.href = '/payment.html';
+      });
+    });
+  </script>
+</body>
+</html>

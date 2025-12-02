@@ -1,0 +1,9 @@
+﻿filebeat.inputs:
+- type: log
+  paths:
+    - /app/app-logs.log
+  fields:
+    app_name: "forcebrute-app"
+
+output.logstash:
+  hosts: ["logstash:5044"]
